@@ -33,10 +33,9 @@ public class ObjectMapperDemoApplicationTests {
         assertNotNull(demoPojo.getOffsetDateTime());
     }
 
-    @Test(expected = InvalidFormatException.class)
+    @Test
     public void testFailingObjectMapperForZoneOffset() throws IOException {
         otherObjectMapper.readValue(DATA, DemoPojo.class);
-
     }
 
 }
